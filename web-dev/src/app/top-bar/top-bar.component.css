@@ -1,0 +1,102 @@
+@font-face {
+  font-family: Pompadur; /* Гарнитура шрифта */
+  src: url(fonts/GrandHotel-Regular.otf);
+}
+
+.topMenu__logo {
+  font-family: Pompadur, serif;
+  font-size: 30px;
+  display: block;
+  margin-left: 41px;
+  margin-top: -5px;
+  margin-right: 35px;
+  float: left;
+  color: hsla(0, 0%, 100%, .8);
+  cursor: pointer;
+}
+.topMenu__logo:hover {
+  color: #ff5032;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+}
+
+li {
+  display: inline;
+  margin: 7px 10px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+li:hover {
+  color: #ff5032;
+}
+
+body {
+  margin: 0;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #bfbfbf;
+  border-radius: 16px;
+  margin-left: 10px;
+}
+
+#acc-logo {
+  background: url(/../../assets/images/account.png) no-repeat 6px;
+  background-size: 65%;
+}
+.logo:hover{
+  width: 35px;
+  height: 35px;
+}
+
+#notify-logo {
+  opacity: .65;
+  background: url(https://images.kinorium.com/web/svg/icon_32_nav_notification_bell.svg?v=4) -1px -97px;
+}
+#notify-logo:hover {
+  background: url(https://images.kinorium.com/web/svg/icon_32_nav_notification_bell.svg?v=4) -3px -117px;
+  background-size: 110%;
+}
+#search{
+  margin-left: auto;
+  width: 235px;
+  padding-left: 35px;
+  padding-right: 30px;
+  border-radius: 2px;
+  height: 30px;
+  color: hsla(0, 0%, 100%, .8);
+  border: 1px solid #616161;
+  background: #616160 url(https://images.kinorium.com/web/svg/icon_32_search_top.svg) 0 no-repeat;
+  font: normal 14px Arial;
+}
+#search::placeholder{
+  color: hsla(0, 0%, 100%, 0.6);
+}
+.auth_button {
+  float: right;
+  width: auto;
+  line-height: 32px;
+  font-size: 14px;
+  padding: 0 16px;
+  margin: 0 50px 0 10px;
+  height: 32px;
+  border-radius: 16px;
+}
+.bluebutton {
+  background: linear-gradient(
+    90deg
+    ,#22d9c8 20%,#2299d9)!important;
+  color: #fff!important;
+  border: none!important;
+  cursor: pointer;
+}
+.bluebutton:hover, .bluebutton:focus {
+  background: linear-gradient(
+    90deg
+    ,#59e2d5 40%,#59b2e2)!important;
+}

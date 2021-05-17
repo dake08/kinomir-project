@@ -1,0 +1,33 @@
+<div *ngIf="userId!=-1" id="root">
+  <div class="container">
+
+    <h2 class="head">Добавить фильм</h2>
+
+    <label for="new-task"></label><input id="new-task" type="text" placeholder="Название фильма" [(ngModel)]="add">
+    <button class="add" (click)="createFavoriteFilm()">{{add}}</button>
+
+    <div class="mainHead"><h2 class="head2">Избранное</h2>
+      <button id="clearIt" class="material-icons delete"><i class="material-icons">clear</i></button>
+    </div>
+    <ul id="unfinished-tasks">
+
+      <li *ngFor="let favorite of favorites">
+        <button class="material-icons checkbox"><i class="material-icons blank">check_box_outline_blank</i></button>
+        <label>{{favorite.name}}</label><input type="text">
+        <button class="material-icons delete" (click)="deleteFavoriteFilm(favorite.id)"><i
+          class="material-icons">delete</i></button>
+        <button class="material-icons edit" (click)="movieClicked(favorite); flag = !flag"><i class="material-icons">edit</i></button>
+
+      </li>
+
+    </ul>
+    <div *ngIf="flag">
+      <label for="new-task"></label><input id="new-task2" type="text" [(ngModel)]="clickedMovie.name">
+      <button class="add" (click)="updateFavoriteFilm();flag = !flag">Изменить</button>
+    </div>
+  </div>
+
+</div>
+<div *ngIf="userId==-1">
+  <h2 class="head">Вы не авторизованы</h2>
+</div>

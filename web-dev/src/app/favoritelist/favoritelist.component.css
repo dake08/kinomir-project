@@ -1,0 +1,228 @@
+body {
+  background: #EDEEF0;
+  /*color: #3B3B3C;*/
+  color: #2a5885;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, Open Sans, Helvetica Neue, 'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans Cherokee', 'Noto Sans Devanagari', 'Noto Sans Ethiopic', 'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans Lao', 'Noto Sans Osmanya', 'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai', sans-serif;
+}
+
+.container {
+  display: block;
+  width: 900px;
+  margin: 100px auto 0;
+  padding: 40px 32px 60px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 1px 0 0 #d3d9de, 0 0 0 1px #e7e8ec;
+}
+
+ul {
+  padding: 0;
+}
+
+ul#unfinished-tasks {
+  margin: 30px 0 10px;
+}
+
+li, h3 {
+  clear: both;
+  list-style: none;
+}
+
+input, button {
+  outline: none;
+}
+
+button {
+  background: none;
+  border: 0;
+  color: #5294E2;
+  font-size: 15px;
+  font-family: sans-serif;
+  cursor: pointer;
+  float: right;
+  margin: 8px auto;
+}
+
+button:hover {
+  color: #4286D3;
+}
+
+.add:hover {
+  border-radius: 6px;
+}
+
+.add {
+  float: right;
+  padding: 10px;
+  margin-top: 4px;
+  margin-right: 45px;
+  width: 100px;
+  border: none;
+  background: #1877f2;
+  color: #ffffff;
+  border-radius: 6px;
+  line-height: 32px;
+  font-weight: normal;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #22d9c8 20%, #2299d9);
+}
+
+.add:hover {
+  background: #1472EE;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 18px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e7e8ec;
+}
+
+h2.head2 {
+  width: 900px;
+}
+
+h2.Done {
+  margin: 10px 0 25px;
+}
+
+input[type="text"] {
+  margin: 10px 26px 5px 52px;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 10px;
+  border: 1px solid #d3d9de;
+  border-radius: 6px;
+  font-family: sans-serif;
+  color: #828282;
+}
+
+input[type="text"]:focus {
+  color: black;
+}
+
+label[for='new-task'] {
+  display: block;
+  margin: 0 0 20px;
+}
+
+input#new-task {
+  float: left;
+  width: 650px;
+  margin-bottom: 35px;
+}
+input#new-task2 {
+  float: left;
+  width: 650px;
+  margin-bottom: 35px;
+}
+
+
+li {
+  overflow: hidden;
+  border-bottom: 2px solid #E4E4E4;
+  list-style-type: none;
+  padding: 15px;
+  font-family: Alternate Gothic No, FF Meta Serif, Georgia, Verdana, BlinkMacSystemFont, Roboto, Open Sans, sans-serif;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li > input[type="checkbox"] {
+  margin: 0 30px;
+  position: relative;
+  top: 15px;
+  transform: scale(1.5);
+}
+
+li > label {
+  font-size: 16px;
+  line-height: 32px;
+  width: 237px;
+  padding: 4px 0 0 30px;
+
+
+}
+
+li > input[type="text"] {
+  width: 457px;
+}
+
+li > .delete {
+  color: #FF3F3F;
+}
+
+li > .delete:hover {
+  color: #B41F1F;
+}
+
+#done li {
+  border-bottom: 2px solid #E4E4E4;
+}
+
+#done li:last-child {
+  border-bottom: none;
+}
+
+#done label, #done button {
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+ul li input[type=text] {
+  display: none;
+}
+
+ul li.editMode input[type=text] {
+  display: block;
+}
+
+ul li.editMode label {
+  display: none;
+}
+
+button.checkbox {
+  float: left;
+}
+
+ul#done {
+  margin: 5px 0;
+  padding: 0;
+}
+
+.mainHead {
+  width: 900px;
+  display: inline-block;
+  height: 60px;
+}
+
+#clearIt {
+  float: right;
+  position: relative;
+  bottom: 60px;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v32/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons', serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+}
+
+i {
+  font-style: normal;
+}
+
+i.blank {
+  font-style: italic;
+}
+

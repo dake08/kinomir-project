@@ -1,0 +1,91 @@
+<div *ngIf="dialog !== 'false'" class="modalWindow auth-popup" id="modalAuthWindow">
+  <div class="activeWindow">
+    <button *ngIf="dialog !== 'hello'" class="back" rel="goto" (click)="dialog='hello'"></button>
+    <button [routerLink]="['/home/']" (click)="dialog='hello'" class="close"></button>
+    <div class="authContent">
+      <form *ngIf="dialog == 'hello'" class="hello dialog" data-dest="hello" >
+        <span class="topMenu__logo">Kinomir</span>
+        <button class="button_theme_normal" rel="goto" data-goto="intReg" tabindex="1" (click)="gotoReg()">Регистрация</button>
+        <p class="or"><s>&nbsp;</s> или <s>&nbsp;</s></p>
+        <button [routerLink]="['/home/']" class="vkAuth button_theme_normal" tabindex="2"><span>Войти как гость</span></button>
+        <a class="link" rel="goto" data-goto="intAuth" tabindex="5" (click)="gotoAuth()">У меня уже есть аккаунт</a>
+      </form>
+
+      <form [formGroup]="formLog" *ngIf="dialog === 'intAuth'" class="intAuth dialog" data-dest="intAuth" autocomplete="on">
+        <span class="topMenu__logo">Kinomir</span>
+
+        <label name="email"> <input formControlName="email" type="email" name="email" placeholder="E-mail" autocomplete="on" tabindex="1">  </label>
+        <label name="password"> <input formControlName="password" type="password" name="password"
+                                                                        autocomplete="on"
+                                                                        autocapitalize="off" autocorrect="off"
+                                                                        class="pass" value="" placeholder="Пароль"
+                                                                        tabindex="2">
+        </label>
+
+        <button class="submit button_theme_normal" type="button" (click)="submitLog()" tabindex="3"><span>Войти</span></button>
+
+        <a href="#" class="link" rel="goto" data-goto="lostPass">Не помню пароль</a>
+      </form>
+      <form [formGroup]="formReg" *ngIf="dialog === 'intReg'" class="intReg dialog" data-dest="intReg" autocomplete="off">
+        <span class="topMenu__logo">Kinomir</span>
+        <div class="file_upload">
+          <label for="avatarfile"> <img class="photo" src="https://images.kinorium.com/web/blank.png"> </label>
+          <input type="file" id="avatarfile">
+        </div>
+
+        <label name="name"> <input [(ngModel)]="iName" formControlName="name" type="textfield" placeholder="Имя" tabindex="1"> </label>
+        <label name="surname"> <input [(ngModel)]="iSurname" formControlName="surname" type="textfield" placeholder="Фамилия" tabindex="1"> </label>
+        <label name="email"> <input [(ngModel)]="iEmail" formControlName="email" type="email" placeholder="E-mail" tabindex="3" autocomplete="off"> </label>
+        <label name="password"> <input [(ngModel)]="iPassword" formControlName="password" type="password" value="" class="pass"
+                                                                        autocomplete="off" autocapitalize="off"
+                                                                        autocorrect="off" placeholder="Пароль"
+                                                                        tabindex="4">
+        </label>
+<!--        <label name="pass_validate"> <input type="password" value="" class="pass" autocomplete="off"-->
+<!--                                                     autocapitalize="off" autocorrect="off" placeholder="Пароль еще раз"-->
+<!--                                                     tabindex="5">  </label>-->
+
+        <button class="submit button_theme_normal" type="button" (click)="submitReg()" tabindex="6">
+          <span>Готово</span>
+        </button>
+
+        <a class="link">Ваши регистрационные данные: <br> "Имя: {{iName}}"
+          <br> "Фамилия: {{iSurname}}"
+          <br> "Email: {{iEmail}}"
+          <br> "Пароль: {{iPassword}}             "
+                                 </a>
+
+      </form>
+
+      <form *ngIf="dialog === 'lostPass'" class="lostPass dialog" data-dest="lostPass"><span class="topMenu__logo"></span> <b>Восстановление
+        пароля</b> <label name="email"> <input type="email" placeholder="E-mail" tabindex="1">  </label>
+        <button class="submit button_theme_normal" tabindex="2">
+          <span>Готово</span></button>
+        <p>На указанный вами e-mail будет отправлено сообщение с дальнейшими указаниями</p></form>
+      <form *ngIf="dialog === 'extReg'" class="extReg dialog" autocomplete="off" data-dest="extReg"><span class="topMenu__logo"></span> <label
+        class="file_upload">
+        <div class="photo"></div>
+      </label> <label name="name"> <input type="textfield" disabled="" placeholder="Имя" tabindex="1">  </label> <label name="surname"> <input type="textfield" disabled="" placeholder="Фамилия"
+                                                                     tabindex="2">  </label>
+        <label name="email"> <input type="email" autocomplete="off" placeholder="E-mail" tabindex="3">  </label> <label name="password"> <input type="password" autocomplete="off" value=""
+                                                                        class="pass" autocapitalize="off"
+                                                                        autocorrect="off" placeholder="Пароль"
+                                                                        tabindex="4">
+        </label> <label name="pass_validate"> <input type="textfield" value="" class="pass" autocomplete="off"
+                                                     autocapitalize="off" autocorrect="off" placeholder="Пароль еще раз"
+                                                     tabindex="5">  </label> <input
+          type="hidden" value="" name="token"> <input type="hidden" value="" name="type">
+        <button class="submit button_theme_normal" tabindex="6">
+          <span>Готово</span></button>
+        <a href="/agreement/" class="link" target="_blank">Регистрируясь, я принимаю условия пользования сервисом</a>
+      </form>
+      <form *ngIf="dialog === 'intRegFinished'" class="intRegFinished dialog">
+        <div class="center">
+          <div class="topMenu__logo">Kinomir</div>
+          <img src="https://images.kinorium.com/web/blank.png"> <b> Вы успешно зарегистрированы!</b>
+          <button (click)="dialog='intAuth'"  class="submit button_theme_normal ">Превосходно</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,246 @@
+.main_page{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+
+.main__container{
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  max-width: 1280px;
+  min-width: 980px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.poster-container{
+  padding: 50px 0 0 50px;
+  clip: rect(auto,300px,auto,auto);
+}
+
+.main_poster {
+  position: relative;
+  display: table-cell;
+  background-color: #eee;
+  vertical-align: middle;
+  text-align: center;
+  height: 300px;
+  max-width: 300px;
+  margin: auto;
+}
+.image_container{
+}
+
+img{
+  display: block;
+}
+
+
+.head{
+  cursor: pointer;
+  background: #f2f2f2;
+  display: block;
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+  font: normal 14px/32px Arial;
+  color: rgba(0,0,0,.5);
+  border: 0;
+}
+.favourites{
+  display: block;
+  width: 76px;
+  padding: 5px;
+  box-sizing: border-box;
+  font: normal 14px/32px Arial;
+  border: none;
+  border-left: 1px solid #fff;
+  background: #f2f2f2;
+  float: left;
+  cursor: pointer;
+  border-radius: 0 0 2px 0;
+}
+
+.collectionWidget__buttons-wrap{
+  display: flex;
+}
+
+.collectionWidget__buttons-wrap .head {
+  width: 524px;
+  float: left;
+  border-radius: 0 0 0 2px;
+}
+
+
+.like{
+  width: 32px;
+  height: 32px;
+  opacity: .25;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: fuchsia;
+  background-image: url("1.png");
+}
+
+
+
+.information-container{
+  max-width: 820px;
+  padding: 30px 50px 0;
+  vertical-align: top;
+}
+.information{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+.container{
+  margin: auto;
+}
+
+.tabs_subpage{
+  display: flex;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 30px;
+}
+
+ul{
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+
+li{
+  display: list-item;
+}
+.tabs-subpage__item{
+  background-color: #f8f8f8;
+  margin-right: 5px;
+  display: block;
+  padding: 0 10px;
+  font-size: 14px;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #eee;
+  border-bottom: 0;
+  border-radius: 2px 2px 0 0;
+  color: rgba(0,0,0,.8);
+  position: relative;
+  top: 1px;
+}
+.film-page__title{
+  font-size: 28px;
+  position: relative;
+  padding-right: 60px;
+}
+.film-page__title-elements {
+  display: inline;
+}
+h1 {
+  font: normal 28px Arial;
+}
+.film-page__title-yaer{
+  display: inline;
+}
+
+.infotable {
+  font-size: 20px;
+}
+
+.infotable .legend {
+  color: rgba(0,0,0,.5);
+  padding: 5px 0;
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+.infotable .data {
+  padding: 5px 70px;
+}
+.film-page__infowrap{
+  background-color: #f8f8f8;
+  padding: 20px 30px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.film-page-buttons-wrapper{
+  margin: 30px 0 0;
+  padding-right: 170px;
+}
+
+.film-page__buttons-wrapper .film-page__genres {
+  display: block;
+  width: 100%;
+}
+.genres li {
+  float: left;
+  margin: 0 10px 10px 0;
+  height: 32px;
+}
+
+.genres li a, .genres li span {
+  background: #ffe391;
+  border-radius: 2px;
+  padding: 8px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #353535;
+}
+
+.genres:after{
+  background-color: red;
+}
+
+iframe{
+  min-width: 500px;
+  height: 315px;
+  max-width: 700px;
+}
+
+a:hover{
+  color: red;
+}
+
+.comment_container{
+  padding: 0px 0 0 50px;
+}
+
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+

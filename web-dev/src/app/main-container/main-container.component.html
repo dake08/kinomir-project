@@ -1,0 +1,52 @@
+<div class="welcome-slide"></div>
+
+<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;display=swap" rel="stylesheet">
+<style>
+</style>
+
+<div class="welcomeSlider">
+  <div class="navigation">
+    <div [ngClass]="{active: slide==='slide1'}" (click)="slide='slide1'">
+      <div></div>
+    </div>
+    <div [ngClass]="{active: slide==='slide2'}" (click)="slide='slide2'">
+      <div></div>
+    </div>
+    <div [ngClass]="{active: slide==='slide3'}" (click)="slide='slide3'">
+      <div></div>
+    </div>
+    <div [ngClass]="{active: slide==='slide4'}" (click)="slide='slide4'">
+      <div></div>
+    </div>
+  </div>
+
+  <div [ngClass]="{active: slide==='slide1'}" class="welcomeBanner welcomeGandalf">
+    <div class="bannerContent"><h1>Мир кино</h1>
+      <h2>Мгновенный поиск фильмов и удобный серфинг по базе данных.<br>Вы всегда будете в курсе, что и когда смотреть.
+      </h2> <a [routerLink]="['/films/']" class="button welcome">ПОСМОТРЕТЬ СПИСКИ ФИЛЬМОВ</a></div>
+  </div>
+
+  <div [ngClass]="{active: slide==='slide2'}" class="welcomeBanner welcomeBatman">
+    <div class="bannerContent"><h1>Полное погружение</h1>
+      <h2>В Кинориуме вы можете отмечать фильмы, ставить оценки и <br>обмениваться впечатлениями с друзьями.</h2> <a
+         class="button welcome" >ВОЙТИ В КИНОРИУМ</a></div>
+  </div>
+  <div [ngClass]="{active: slide==='slide3'}" class="welcomeBanner welcomeVeider">
+    <div class="bannerContent"><h1>Лента друзей</h1>
+      <h2>Следите за фильмами, которые смотрят друзья, и делитесь своими <br>впечатлениями с ними.</h2> <a
+        class="button welcome"
+        >НАЙТИ ДРУЗЕЙ</a>
+    </div>
+  </div>
+  <div [ngClass]="{active: slide==='slide4'}" class="welcomeBanner welcomeVoldemort">
+    <div class="bannerContent"><h1>Быстрый старт</h1>
+      <h2> Если у вас есть профиль на Кинопоиске, IMDb или myShows, то вы легко и <br> быстро можете перенести все свои
+        оценки в Кинориум. </h2> <a class="button welcome"
+                                    >ИМПОРТИРОВАТЬ
+        ОЦЕНКИ</a></div>
+  </div>
+</div>
+
+
+
+

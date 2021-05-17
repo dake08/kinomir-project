@@ -1,0 +1,211 @@
+app-top-bar {
+  position: sticky;
+  z-index: 210;
+  width: 100%;
+  max-width: 1248px;
+  min-width: 980px;
+  margin: auto;
+  height: 57px;
+  background-color: #303030;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: hsla(0, 0%, 100%, .8);
+}
+
+.maxwidth{
+  max-width: 1280px;
+  margin: auto;
+}
+.ui-selectmenu-text {
+  display: block;
+  margin-right: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@font-face {
+  font-family: Pompadur; /* Гарнитура шрифта */
+  src: url('src/app/top-bar/fonts/GrandHotel-Regular.otf');
+}
+
+.topMenu__logo {
+  font-family: Pompadur, serif;
+  font-size: 38px;
+  display: block;
+  margin-left: -8px;
+  float: none;
+  color: hsla(0, 0%, 0%, .95);
+  opacity: .8;
+  cursor: pointer;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.bottom_menu {
+  box-sizing: content-box;
+  width: auto;
+  padding-bottom: 0!important;
+  margin-top: 20px;
+}
+.main-table {
+  max-width: 1280px;
+  min-width: 980px;
+  background-color: #fff;
+  clear: both;
+  width: 100%;
+  padding-bottom: 70px;
+}
+.bottom_menu__other-resources, .bottom_menu__social, .bottom_menu__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.bottom_menu__other-resources, .bottom_menu__wrapper {
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.bottom_menu__wrapper {
+  padding: 0 50px 0;
+  position: relative;
+}
+.bottom_menu .cell {
+  padding: 4px 0;
+  font-size: 12px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.bottom_menu__info {
+  width: 210px;
+}
+.bottom_menu p {
+  color: rgba(0,0,0,.5);
+  font: normal 12px Arial;
+  margin-top: 15px;
+}
+
+
+ol, ul {
+  list-style: none;
+}
+
+.bottom_menu__copyright {
+  font-size: 13px;
+  color: rgba(0,0,0,.5);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  position: absolute;
+  right: 42px;
+  top: 95px;
+}
+.bottom_menu__copyright .copyright__mail {
+  display: inline;
+  margin-right: 20px;
+  color: hsla(0,0%,100%,.5);
+  text-decoration: none;
+}
+
+.bottom_menu__main-link {
+  color: rgba(0,0,0,.5);
+  text-decoration: none;
+  min-width: 80px;
+}
+
+
+.bottom_menu__control-wrap {
+  margin-top: 27px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 50px 40px;
+}
+
+.copyright {
+  font-size: 13px;
+  color: rgba(0,0,0,.5);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+#dataCountrySelect-button, #dataLanguageSelect-button, #themeSelect-button {
+  font: normal 13px Arial;
+  color: rgba(0,0,0,.5);
+  background: transparent;
+  border: none;
+  width: 146px;
+}
+.ui-selectmenu-button.ui-button {
+  text-align: left;
+  white-space: nowrap;
+  width: 14em;
+}
+#dataCountrySelect-button, #dataLanguageSelect-button, #themeSelect-button {
+  font: normal 13px Arial;
+  color: rgba(0,0,0,.5);
+  background: transparent;
+  border: none;
+  width: 146px;
+}
+.bottom_menu li {
+  list-style-type: none;
+  font: normal 12px/24px Arial;
+  color: rgba(0,0,0,.5);
+}
+.bottom_menu__links li {
+  display: inline-block;
+  margin-left: 25px;
+}
+.bottom_menu li a:hover {
+  color: #ff5032;
+}
+.bottom_menu li a {
+  color: rgba(0,0,0,.5);
+  text-decoration: none;
+}
+
+.classA{
+  display: flex;
+  position: absolute;
+  right: 65px;
+  top: 14px;
+}
+.ui-selectmenu-text:hover{
+  cursor: pointer;
+  color: #ff5032;
+}
+.darkness{
+  background: #111;
+  color: hsla(0,0%,100%,.5);
+}
+
+
+.lightness{
+  background: #fff;
+}
+.lightness div,.darkness a,.darkness p{
+  color: rgba(0,0,0,.5);
+}
+.darkness div,.darkness a,.darkness p{
+  background: #222;
+  color: hsla(0,0%,100%,.5);
+}
+.darkness bottom_menu p {
+  color: rgba(0,0,0,.5);
+  font: normal 12px Arial;
+  margin-top: 15px;
+}
+.lightness .bottom_menu__copyright .copyright__mail {
+  display: inline;
+  margin-right: 20px;
+  color: rgba(0,0,0,.5);
+  text-decoration: none;
+}

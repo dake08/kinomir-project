@@ -1,0 +1,120 @@
+<div class="main_page" *ngIf="film">
+  <div class="main__container">
+    <div class="poster-container">
+      <div id="main__poster">
+        <div class = "movie_poster__wrapper">
+            <div class="image_container">
+            <img src="{{film.img}}">
+            </div>
+            <div class="collectionWidget">
+              <div class="collectionWidget__buttons-wrap">
+                <button class="head">
+                  <span class="">
+                  Добавить в список
+                  </span>
+                </button>
+                <button class="favourites ">
+                  <span class="like">
+                  </span>
+                </button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="information-container">
+      <section class="information">
+        <div class="container film-page">
+          <ul class="tabs_subpage">
+            <li> <a class="tabs-subpage__item activtabs" [ngStyle]="{'background-color': status=='film' ?  '#fff': '#f8f8f8'}" (click)="status='film'">Фильм</a></li>
+            <li> <a class="tabs-subpage__item activtabs" [ngStyle]="{'background-color': status=='actor' ?  '#fff': '#f8f8f8'}" (click)="status='actor'">Актеры</a></li>
+            <li> <a class="tabs-subpage__item activtabs" [ngStyle]="{'background-color': status=='photo' ?  '#fff': '#f8f8f8'}" (click)="status='photo'">Кадры</a></li>
+            <li> <a class="tabs-subpage__item activtabs" [ngStyle]="{'background-color': status=='video' ?  '#fff': '#f8f8f8'}" (click)="status='video'">Видео</a></li>
+          </ul>
+          <div class="film-page__title">
+            <div class="film-page__title-elements">
+                <h1>{{film.name}}</h1>
+            </div>
+          </div>
+          <div class="film-page__infowrap" *ngIf="status=='film'">
+            <table class="infotable">
+              <tbody>
+              <tr>
+                <td class="legend">Страна </td>
+                <td class="data"> {{film.country}} </td>
+              </tr>
+              <tr>
+                <td class="legend">Длительность  </td>
+                <td class="data"> {{film.time}} </td>
+              </tr>
+              <tr>
+                <td class="legend">премьера: Мир</td>
+                <td class="data"> {{film.worldPremiere}} </td>
+              </tr>
+              <tr>
+                <td class="legend"> премьера: США	</td>
+                <td class="data"> {{film.usaPremiere}}  </td>
+              </tr>
+              <tr>
+                <td class="legend"> премьера: РФ	</td>
+                <td class="data"> {{film.ruPremiere}} </td>
+              </tr>
+              <tr>
+                <td class="legend">  другие названия	</td>
+                <td class="data"> {{film.otherName}} </td>
+              </tr>
+
+              </tbody>
+
+            </table>
+
+          </div>
+          <div class="film-page__video" *ngIf="status=='video'">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YoHD9XEInc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="film-page-buttons-wrapper">
+            <ul class="film-page__genres genres" *ngFor=" let genre of film.genres">
+              <li>
+                <a>
+                  {{genre}}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="comment comment_container">
+    <h2> Comments: </h2>
+    <div *ngFor="let commet of comments">
+      <br>
+    <strong>
+      {{commet.user.email}} - {{commet.date}}
+    </strong>
+      <br/>
+      <div>
+      <p>
+        {{commet.body}}
+        <button  class="tabs-subpage__item" (click)="deleteComment(commet.id)" *ngIf="user.id == commet.user.id">Delete</button>
+      </p>
+      </div>
+    </div>
+  </div>
+  <div class="comment_form">
+    <div class="comment_container">
+      <div class="container">
+        <div class="container1">
+          <form action="action_page.php">
+
+            <label for="subject">Type comment here</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" [(ngModel)]="body"></textarea>
+
+            <input type="submit" value="Submit" (click)="addComment()">
+
+          </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

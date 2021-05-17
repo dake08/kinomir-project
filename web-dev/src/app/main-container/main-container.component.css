@@ -1,0 +1,153 @@
+body {
+  max-width: 1312px;
+}
+
+.welcomeSlider {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.welcomeBanner {
+  width: 100%;
+  height: 550px;
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  margin-right: 0;
+  font-family: 'PT Sans', sans-serif;
+  opacity: 0;
+  transition: opacity .8s ease-in 0s;
+}
+
+.welcomeBanner * {
+  opacity: 0;
+  transition: opacity .8s ease-in .5s;
+}
+
+.welcomeBanner.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.welcomeBanner.active * {
+  opacity: 1;
+}
+
+.welcomeBanner .bannerContent {
+  margin-top: 161px;
+}
+
+.welcomeBanner .bannerContent h1 {
+  font: normal 65px/65px 'PT Sans', sans-serif;;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  margin: 0px 0 0 50px;
+}
+
+.welcomeBanner .bannerContent h2 {
+  font: normal 20px/30px 'PT Sans', sans-serif;;
+  letter-spacing: -0.4px;
+  color: rgb(255, 255, 255);
+  margin: 25px 0 0px 50px;
+}
+
+.welcomeBanner .bannerContent .button {
+  background: rgb(33, 176, 208);
+  letter-spacing: 1.5px;
+  font: bold 16px 'PT Sans', sans-serif;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  margin: 35px 50px 0;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.welcomeBanner .bannerContent .button:hover {
+  background: rgb(255, 80, 50);
+  cursor: pointer;
+}
+
+.welcomeGandalf {
+  background: url(https://images.kinorium.com/web/img1.jpg) center center no-repeat;
+}
+
+.welcomeBatman {
+  background: url(https://images.kinorium.com/web/img2.jpg) center center no-repeat;
+}
+
+.welcomeVeider {
+  background: url(https://images.kinorium.com/web/img3.jpg) center center no-repeat;
+}
+
+.welcomeVoldemort {
+  background: url(https://images.kinorium.com/web/img4.jpg) center center no-repeat;
+}
+
+.welcomeSlider .navigation {
+  position: absolute;
+  width: 100%;
+  margin: 512px auto 0;
+  z-index: 3;
+  text-align: center;
+}
+
+.welcomeSlider .navigation > div {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin: 0px;
+  cursor: pointer;
+}
+
+.welcomeSlider .navigation > div > div {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 5px;
+  display: inline-block;
+}
+
+.welcomeSlider .navigation > div:hover > div {
+  background: rgb(255, 80, 50);
+}
+
+.welcomeSlider .navigation > div.active > div {
+  background: rgb(33, 176, 208);
+}
+
+/*@media all and (max-width: 1260px) {*/
+/*  .welcomeSlider {*/
+/*    height: 450px;*/
+/*  }*/
+
+/*  .welcomeBanner {*/
+/*    margin-top: -50px;*/
+/*  }*/
+
+/*  .welcomeSlider .navigation {*/
+/*    margin-top: 412px;*/
+/*  }*/
+/*}*/
+
+#flag {
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+

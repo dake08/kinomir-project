@@ -1,0 +1,36 @@
+<div [ngClass]="{'darkness': side === 'dark', 'lightness' : side === 'light' }">
+  <div class="maxwidth">
+    <app-top-bar></app-top-bar>
+    <router-outlet ></router-outlet>
+    <div class="footer-wrapper">
+      <div class="main-table bottom_menu">
+        <div class="bottom_menu__wrapper">
+          <div class="cell bottom_menu__info"><a href="/" class="topMenu__logo">Kinomir</a>
+            <p> Лучший сервис для поиска фильмов и обмена впечатлениями с друзьями </p>
+
+          </div>
+
+          <div class="bottom_menu__copyright"><a class="copyright__mail"
+                                                 href="mailto:kinomir@gmail.com">kinomir@gmail.com</a> <a
+            class="bottom_menu__main-link" href="/">© Киномир</a></div>
+          <div class="classA"><a href="/" class="topMenu__logo" style="font-size: 32px">{{flag}}</a></div>
+        </div>
+
+        <div class="bottom_menu__control-wrap">
+          <div class="copyright">
+        <span
+          class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"
+        >Страна: Казахстан</span>
+
+            <span
+              class="ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget"
+              style="width: 130px;">
+          <span class="ui-selectmenu-text" *ngIf="side=='light'" (click)="changeSide()">Светлая сторона</span>
+          <span class="ui-selectmenu-text" *ngIf="side=='dark'" (click)="changeSide()">Темная сторона</span>
+        </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
